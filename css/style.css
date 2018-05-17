@@ -1,0 +1,552 @@
+body {
+    /* Create space around elements */
+    margin: 0;
+    /* What should happen if content overflows an element's box */
+    overflow: hidden;
+}
+
+#nav_icons {
+    /* Specifies the type of list-item marks in a list */
+    list-style-type: none;
+    margin: 0;
+    /* Generate space around an element's content, inside of any defined borders */
+    padding: 0;
+    /* Sets the width of an element */
+    width: 6%;
+    /* Sets the background color of an element */
+    background-color: #f1f1f1;
+    /* Specifies the type of positioning method used for an element */
+    position: fixed;
+    /* Sets the height of an element */
+    height: 200%;
+    overflow: auto;
+    /* Specifies the style, width, and color of an elements border */
+    border-right: 1px solid #bbb;
+}
+
+#note_selection {
+    margin-left: 6%;
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid #bbb;
+}
+
+#note_top {
+    width: 100%;
+    height: 15%;
+    border-bottom: 1px solid #bbb;
+}
+
+#select_note {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+
+#create_note {
+    width: 100%;
+    height: 20%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #bbb;
+    /* Specifies the mouse cursor to be displayed when pointing over an element */
+    cursor: pointer;
+    /* Sets the color of the font */
+    color: #555;
+    margin-top: -8%
+}
+
+#create_note:hover {
+    background-color: #eee; 
+    color: #555;
+}
+
+#title {
+    padding-bottom: 1%;
+    padding-left: 1%;
+    margin-top: 2%;
+    /* Sets the size of the text */
+    font-size: 30px;
+    border: none; 
+    /* Sets the syle of the text */
+    font-family: sans-serif;
+    margin-left: 2%;
+    width: 55%;
+    /* Sets how thick or thin characters in text should be displayed */
+    font-weight: bold;
+}
+
+#notes {
+    margin-left: 2%;
+    width: 66%;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-bottom: 50%;
+    border: none;  
+    height: 100%;
+    color: #555;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.title_note {
+    padding: 15px;
+    font-size: 20px;
+    margin-top: 6%;
+    font-family: sans-serif;
+}
+
+.desc_note {
+    padding: 15px;
+    font-size: 14px;
+    margin-top: -12%;
+    font-family: sans-serif;
+}
+
+.notes_header {
+    margin-left: 35%;
+    padding-top: 5%;
+    font-family: sans-serif;
+    font-size: 28px;
+}
+
+.note_desc {
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-left: 3%;
+    margin-top: -3%;
+    color: #555;
+}
+
+.note_below {
+    margin-top: -5%;
+    margin-left: 16%;
+}
+
+#written_notes {
+    margin-left: 31%;
+    margin-top: -49%;
+    width: 100%;
+    height: 110%;
+}
+
+#edit_notes {
+    width: 100%;
+    height: 11%;
+    border-bottom: 1px solid #bbb;
+}
+
+#add_notes {
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
+}
+
+.delete_note {
+    width: 6%;
+    margin-left: 90%;
+    margin-top: -24%;
+    margin-bottom: -0.4%;
+    cursor: pointer;
+}
+
+#note_header {
+    margin-left: 3%;
+    margin-top: 2%;
+    width: 80%;
+    padding: 12px;
+    border-style: none; 
+    border-color: transparent; 
+    overflow: auto;   
+    resize: none;
+    height: 10%;
+    font-size: 35px;
+    font-family: sans-serif;
+    color: #000;
+}
+
+.logo_icon {
+    width: 60%;
+    margin-top: 15%;
+    margin-left: 20%;
+}
+
+.add_note {
+    background-color: #fff;
+    border: 1px solid #bbb;
+    color: #3385ff;
+    /* Specifies the horizontal alignment of text in an element */
+    text-align: center;
+    height: 3.5%;
+    width: 60%;
+    margin: 4px 2px;
+    /* Change property values smoothly over a given duration */
+    transition: 0.3s;
+    /* Defines the radius of the element's corners */
+    border-radius: 100%;
+    margin-left: 22%;
+    margin-top: 40%;
+    cursor: pointer;
+}
+
+.add_note:hover {
+    background-color: #bbb;
+    color: white;
+}
+
+.plus_icon {
+    width: 70%
+}
+
+.show_notebooks {
+    background-color: #fff;
+    border: 1px solid #bbb;
+    text-align: center;
+    height: 3.5%;
+    width: 60%;
+    margin: 4px 2px;
+    transition: 0.3s;
+    border-radius: 100%;
+    margin-left: 22%;
+    margin-top: 20%;
+    cursor: pointer;
+}
+
+.show_notebooks:hover {
+    background-color: #bbb;
+    color: white;
+}
+
+.notebook_icon {
+    width: 70%
+}
+
+.open_chat {
+    background-color: #fff;
+    border: 1px solid #bbb;
+    text-align: center;
+    height: 3.5%;
+    width: 60%;
+    margin: 4px 2px;
+    transition: 0.3s;
+    border-radius: 100%;
+    margin-left: 22%;
+    margin-top: 20%;
+    cursor: pointer;
+}
+
+.open_chat:hover {
+    background-color: #bbb;
+    color: white;
+}
+
+.chat_icon {
+    width: 70%;
+}
+
+.search_user {
+    background-color: #fff;
+    border: 1px solid #bbb;
+    text-align: center;
+    height: 3.5%;
+    width: 60%;
+    margin: 4px 2px;
+    transition: 0.3s;
+    border-radius: 100%;
+    margin-left: 22%;
+    margin-top: 20%;
+    cursor: pointer; 
+}
+
+.search_user:hover {
+    background-color: #bbb;
+    color: white;
+}
+
+.search_icon {
+    width: 70%
+}
+
+.nav_line {
+    margin-top: 260%;
+    color: #bbb;
+}
+
+.user_account {
+    background-color: #fff;
+    border: 1px solid #bbb;
+    text-align: center;
+    height: 3.5%;
+    width: 60%;
+    margin: 4px 2px;
+    transition: 0.3s;
+    border-radius: 100%;
+    margin-top: 15%;
+    margin-left: 22%;
+}
+
+.user_icon {
+    width: 70%
+}
+
+#select_font {
+    height: 30px;
+    width: 120px;
+    outline: none;
+    color: #555;
+    border: 1px solid #C8BFC4;
+    border-radius: 5px;
+    /* Property attaches one or more shadows to an element */
+    box-shadow: inset 1px 1px 2px #ddd8dc;
+    background: #fff;
+    margin-left: 3%;
+    margin-top: 2%;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#select_size {
+    height: 30px;
+    width: 50px;
+    outline: none;
+    color: #555;
+    border: 1px solid #C8BFC4;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 2px #ddd8dc;
+    background: #fff;
+    margin-top: -3.2%;
+    margin-left: 2%;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.select_arrow {
+    /* Define the background effects for elements */
+    background: url(http://www.stackoverflow.com/favicon.ico) right / 90% no-repeat #fff;
+}
+
+.save_button {
+    border: 1px solid #bbb;
+    color: #555;
+    /* Specifies the decoration added to a text */
+    text-decoration: none;
+    font-family: sans-serif;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px;
+    width: 10%;
+    background: #fff;
+    box-shadow: inset 1px 1px 2px #ddd8dc;
+    margin-left: 58%;
+    margin-top: -57%;
+    cursor: pointer;
+}
+
+.save_button:hover {
+    background-color: #eee;
+    color: #555;
+    border: 1px solid #fff;
+}
+
+#chat_box {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#box_chat {
+    transition: height 1s ease-out;
+    width: 180px;
+    height: 0px;
+    background: #fff;
+    /* Specifies the stack order of an element */
+    z-index: 9999;
+    border-top: 1px solid #bbb;
+}
+
+#open_chat:hover > #box_chat {
+    height: 180px;
+    transition: height 1s ease-out;
+}
+
+#open_chat {
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #bbb;
+    background: #fff;
+    font-family: sans-serif;
+    color: #555;
+    height: 20%;
+}
+
+.friend_list {
+    width: 100%;
+    height: 20%;
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #bbb;
+}
+
+.friend_icon {
+    width: 10%;
+    margin-left: -85%;
+    margin-top: 5%;
+}
+
+.username_text {
+    margin-top: -10%;
+    font-size: 14px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #555;
+}
+
+#bold_text {
+    background: none;
+    border: none;
+    font-family: sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 2%;
+    margin-top: -6%;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+#italic_text {
+    background: none;
+    border: none;
+    font-family: sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 1%;
+    margin-top: -2.7%;
+    font-style: italic;
+}
+
+#underline_text {
+    background: none;
+    border: none;
+    font-family: sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 1%;
+    margin-top: -2.7%;
+    text-decoration: underline;
+}
+
+#message_box {
+    margin-top: -150%;
+    margin-left: 10%;
+    border: 1px solid #bbb;
+    width: 80%;
+    height: 60%;
+    border-radius: 3px;
+    /* Specifies whether or not an element is visible */
+    visibility: hidden;
+}
+
+#name_of_contact {
+    height: 6%;
+    border-bottom: 1px solid #bbb;
+    color: #555;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 2%;
+}
+
+#type_message {
+    border-top: 1px solid #bbb;
+    margin-top: -29%;
+}
+
+#name {
+    border: 1px solid #999;
+    border-radius: 3px;
+    margin-top: 3%;
+    margin-left: 5%;
+    font-size: 12px;
+    height: 8%;
+    padding: 5px;
+    width: 90%;
+}
+
+#message {
+    border: 1px solid #999;
+    border-radius: 3px;
+    margin-top: 3%;
+    margin-left: 5%;
+    font-size: 12px;
+    height: 10%;
+    padding: 5px;
+    width: 90%;
+    height: 8%;
+}
+
+.submit_message {
+    width: 90%;
+    height: 8%;
+    border-radius: 3px;
+    border: 1px solid #bbb;
+    color: #555;
+    cursor: pointer;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+.submit_message:hover {
+    background: #555;
+    color: #fff;
+}
+
+.exit_message_box {
+    width: 6%;
+    cursor: pointer;
+    margin-top: -14%;
+    margin-left: 90%;
+}
+
+.exit_button {
+    background: none;
+    border: none;
+}
+
+#output_message {
+    height: 74%;
+    color: #555;
+    font-size: 12px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.twitter_icon {
+    width: 1.5%;
+    margin-left: 28%;
+    margin-top: 2%;
+    cursor: pointer;
+}
+
+.facebook_icon {
+    width: 1.5%;
+    margin-left: 59.3%;
+    margin-top: -2%;
+    cursor: pointer;
+}
+
+.google_icon {
+    width: 1.5%;
+    margin-left: 63%;
+    margin-top: -2.1%;
+    cursor: pointer;
+}
