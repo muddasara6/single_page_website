@@ -1,0 +1,150 @@
+<!DOCTYPE>
+<html lang="en">
+    <head> 
+        <!-- Specifies the character encoding for the HTML document -->
+        <meta charset="utf-8">
+        <!-- Fit to screen -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Title on the table -->
+        <title>My note to yours | My Note Online</title>
+        <!-- CSS external link -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- jQuery link -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!-- JavaScript external link -->
+        <script type="text/javascript" src="js/main.js"></script>
+    </head>
+        
+    <body>      
+        <!-- Left navigation -->
+        <div id="nav_icons">
+            <!-- Logo -->
+            <img class="logo_icon" src="img/logo_icon.png">
+            <!-- Add note -->
+            <div class="right_text"><button class="add_note"><img class="plus_icon" src="img/plus_sign.png"></button></div>
+            <!-- Show notebooks -->
+            <div class="right_text"><button class="show_notebooks"><img class="notebook_icon" src="img/notebook_icon.png"></button></div>
+            <!-- Open chat -->
+            <div class="right_text"><button class="open_chat"><img class="chat_icon" src="img/chat_icon.png"></button></div>
+            <!-- Search users -->
+            <div class="right_text"><button class="search_user"><img class="search_icon" src="img/search_icon.png"></button></div>
+            <!-- Horizontal line -->
+            <hr class="nav_line">
+            <!-- User account -->
+            <div class="right_text"><button class="user_account"><img class="user_icon" src="img/user_icon.png"></button></div>
+        </div>
+        
+        <!-- Saved notes -->
+        <div id="note_selection">
+            <div id="note_top">
+                <!-- Notes header -->
+                <p class="notes_header">NOTES</p>
+                <!-- The notes saved -->
+                <p class="note_desc">Your notes below</p>
+                <!-- Arrow down -->
+                <p class="note_below">&#11117;</p>
+            </div>
+            <div id="select_note">
+                <div id="create_note">
+                    <!-- Title of the note saved -->
+                    <p class="title_note">Title</p>
+                    <!-- Description of the note saved -->
+                    <p class="desc_note">Description</p>
+                    <div class="bottom_text">
+                        <!-- Delete note saved -->
+                        <img class="delete_note" src="img/delete_icon.png">
+                    </div>
+                </div>
+            </div>
+            <!-- Message box -->
+            <div id="message_box">
+                <div id="name_of_contact"></div>
+                <!-- Exit chat -->
+                <button class="exit_button" onclick="exitBox()"><img class="exit_message_box" src="img/delete_icon.png"></button>
+                <!-- Display messages saved -->
+                <div id="output_message"></div>
+                <div id="type_message">
+                    <!-- User inputs and sends messages -->
+                    <form action="/" method="post">
+                        <!-- User enters name -->
+                        <input id="name" type="text" name="name" placeholder="Type your name...">
+                        <!-- User enters message -->
+                        <input id="message" type="text" name="message" placeholder="Type message...">
+                        <!-- User sends message -->
+                        <input class="submit_message" type="submit" value="Send">
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Create notes -->
+        <div id="written_notes">
+            <div id="edit_notes">
+                <!-- Select font -->
+                <span class="select_arrow"></span>
+                <select id="select_font" onchange="changeFont(this);">
+                    <option value="Arial">Arial</option>
+                    <option value="Sans Serif" selected>Sans Serif</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Trebuchet MS">Trebuchet MS</option>
+                    <option value="Arial Black">Arial Black</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Bookman">Bookman</option>
+                    <option value="Garamond">Garamond</option>
+                    <option value="Palatino">Palatino</option>
+                    <option value="Georgia">Georgia</option>
+                </select>
+                <!-- Font size -->
+                <span class="select_arrow"></span>
+                <select id="select_size" onchange="changeSize(this);">
+                    <option value="8px">8</option>
+                    <option value="10px">10</option>
+                    <option value="12px">12</option>
+                    <option value="14px" selected>14</option>
+                    <option value="18px">18</option>
+                    <option value="24px">24</option>
+                    <option value="32px">32</option>
+                </select>
+                <!-- Bold text -->
+                <button id="bold_text">B</button>
+                <!-- Italic text -->
+                <button id="italic_text">I</button>
+                <!-- Underline text -->
+                <button id="underline_text">U</button>
+                <!-- Share note -->
+                <img class="twitter_icon" src="img/twitter.png">
+                <img class="facebook_icon" src="img/facebook.png">
+                <img class="google_icon" src="img/google.png">
+            </div>
+            <!-- User can create their own notes -->
+            <div id="add_notes">
+                <!-- User inputs and saves note -->
+                <form action="/" method="post">
+                    <!-- User inputs title -->
+                    <input type="text" id="title" name="title" placeholder="Title">
+                    <!-- User inputs their notes -->
+                    <input type="text" id="notes" name="notes" placeholder="Write your notes here...">
+                    <!-- User saves note -->
+                    <input class="save_button" type="submit" value="Save">
+                </form>
+            </div>
+        </div>
+        
+        <!-- Contacts -->
+        <div id="chat_box">
+            <!-- Open chat of the contacts saved -->
+            <div id="open_chat">Contacts
+                <div id="box_chat">
+                    <!-- List of contacts -->
+                    <button class="friend_list" onclick="contactJack()"><img class="friend_icon" src="img/friend_icon.png"><p class="username_text">Jack Smith</p></button>
+                    <button class="friend_list" onclick="contactMichael()"><img class="friend_icon" src="img/friend_icon.png"><p class="username_text">Michael Adam</p></button>
+                    <button class="friend_list" onclick="contactJames()"><img class="friend_icon" src="img/friend_icon.png"><p class="username_text">James Bay</p></button>
+                    <button class="friend_list" onclick="contactSarah()"><img class="friend_icon" src="img/friend_icon.png"><p class="username_text">Sarah Jones</p></button>
+                </div>
+            </div>
+        </div>
+    </body>    
+</html>
