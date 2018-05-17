@@ -1,2 +1,2 @@
 # single_page_website
-A single page website running on Node.js
+A single page website running on Node.js and MySQL
